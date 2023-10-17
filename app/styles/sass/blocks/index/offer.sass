@@ -1,0 +1,47 @@
+.offer
+    &-fire
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 42px
+        height: 42px
+        margin-left: 20px
+        background-color: #ff4646
+        border-radius: 50%
+        svg
+            color: var(--color-white)
+    .swiper
+        &-wrapper
+            align-items: stretch
+        &-slide
+            display: flex
+            height: auto
+            background-color: #f3f5f9
+    .card
+        &-content
+            flex-grow: 1
+            height: auto
+            padding: 10px
+            header
+                padding: 20px 27px 10px 27px
+            footer
+                padding: 10px 27px 20px 27px
+                margin-top: auto
+            header, footer
+                display: flex
+                flex-direction: column
+                gap: 10px
+        &-row
+            justify-content: center
+            gap: 11px
+    .btn
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            min-height: 53px
+
+@media (min-width: 992px)
+    .offer
+        .card
+            &-row

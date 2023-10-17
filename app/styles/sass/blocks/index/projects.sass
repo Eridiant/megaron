@@ -1,0 +1,54 @@
+.projects
+    // .swiper-slide:not(.show)
+    //     display: none
+    //     // max-width: 0
+    // .all
+    //     .swiper-slide
+    //         display: block
+    .card
+        &-content
+            aspect-ratio: 2 / 3
+            padding: 48px 38px 49px 38px
+        &-active
+            text-transform: uppercase
+            svg
+                margin-right: 0
+    &-switch
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
+        margin-bottom: 2.125em
+        a
+            line-height: 3.625em
+            padding: 0 2.9375em
+            transition: .3s
+            border: 1px solid var(--main-text-color)
+            border-radius: var(--radius)
+        span
+            display: inline-flex
+            gap: 10px
+        .active
+            font-weight: 500
+            color: var(--color-white)
+            background-color: var(--main-text-color)
+
+@media (min-width: 992px)
+    .projects
+        .swiper
+            &-buttons
+                top: 115px
+        &-switch
+            max-width: 90%
+            a:hover
+                font-weight: 500
+                color: var(--color-white)
+                background-color: var(--main-text-color)
+
+@media (max-width: 767.98px)
+    .projects
+        &-switch
+            justify-content: center
+            a
+                line-height: 2.625em
+                padding: 0 1.5em
+

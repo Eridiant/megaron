@@ -1,0 +1,327 @@
+
+
+.white
+    color: var(--color-white)
+
+.title
+    font-size: 2.3em
+    // margin-bottom: 1.325em
+    text-transform: uppercase
+    font-family: 'Montserrat', sans-serif
+    font-weight: 500
+
+.caption
+    text-transform: uppercase
+    font-size: 2em
+    font-weight: 500
+
+.subtitle
+    font-size: 0.8125em
+    text-transform: uppercase
+
+section
+    margin-bottom: 60px
+
+@media (max-width: 1199.98px)
+    .container
+        width: 95%
+        // padding-left: 10px
+        // padding-right: 10px
+
+.container, .container-lg
+    position: relative
+    > .background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.btn
+    font-weight: 500
+    font-size: 0.875rem
+    line-height: 2.857em
+    text-transform: uppercase
+    color: var(--color-main)
+    span
+        padding: 0 1.071em
+    svg
+        margin-right: 0.3125em
+    &-white
+        display: inline-flex
+        justify-content: center
+        border-radius: 50px
+        border: 1px solid var(--color-white)
+        background-color: var(--color-white)
+    &-blue
+        display: inline-flex
+        justify-content: center
+        color: var(--color-white)
+        border: 1px solid var(--color-form-blue)
+        background-color: var(--color-form-blue)
+        border-radius: 50px
+
+@media (min-width: 992px)
+    .btn
+        transition: 0.3s
+        svg
+            transition: 0.3s
+        &-white
+            text-shadow: 1px 1px 2px var(--color-white), 1px -1px 2px var(--color-white), -1px 1px 2px var(--color-white), -1px -1px 2px var(--color-white)
+            svg
+                filter: drop-shadow(0.1px 0.1px 1px var(--color-white)) drop-shadow(0.1px -0.1px 1px var(--color-white)) drop-shadow(-0.1px -0.1px 1px var(--color-white)) drop-shadow(-0.1px 0.1px 1px var(--color-white))
+            &:hover
+                background-color: var(--color-white-transparent)
+                backdrop-filter: blur(5px)
+        &-blue
+            &:hover
+                text-shadow: 1px 1px 2px var(--color-white), 1px -1px 2px var(--color-white), -1px 1px 2px var(--color-white), -1px -1px 2px var(--color-white)
+                color: var(--color-blue)
+                background-color: var(--color-form-blue-transparent)
+                backdrop-filter: blur(5px)
+                svg
+                    filter: drop-shadow(0.1px 0.1px 1px var(--color-white)) drop-shadow(0.1px -0.1px 1px var(--color-white)) drop-shadow(-0.1px -0.1px 1px var(--color-white)) drop-shadow(-0.1px 0.1px 1px var(--color-white))
+
+.swiper
+    width: 100%
+    height: 100%
+    padding-bottom: 33px
+    &-slide
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &-pagination
+        &-bullet
+            border-radius: 4px
+            transition: .5s
+            &-active
+                width: 32px
+
+.border
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    min-height: 42px
+    border: 1px solid var(--color-main)
+    border-radius: 50px
+    padding: 0px 18px
+    &-white
+        border: 1px solid var(--color-white)
+    &-blue
+        border: 1px solid var(--color-form-blue)
+        background-color: var(--color-form-blue)
+        color: var(--color-white)
+        svg
+            // color: inherit
+    svg
+        // margin-right: 15px
+@media (min-width: 992px)
+    .border
+
+.encircle
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    width: 51px
+    height: 51px
+    border-radius: 50%
+    svg
+        // color: inherit
+    &-white
+        color: var(--color-white)
+        border: 2px solid var(--color-white)
+    &-white-blue
+        color: var(--color-form-blue)
+        background-color: var(--color-white)
+        // svg
+        //     color: var(--color-form-blue)
+    &-white-black
+        color: var(--color-main)
+        color: #000
+        background-color: var(--color-white)
+        border: 2px solid var(--color-white)
+        // svg
+        //     color: var(--color-main)
+@media (min-width: 992px)
+    .encircle
+        transition: .3s
+        svg
+            transition: .3s
+        &-white
+            &:hover
+                background-color: var(--color-white)
+                svg
+                    color: var(--color-main)
+            &-black
+                &:hover
+                    color: var(--color-white)
+                    background-color: #fff0
+                    svg
+                        filter: drop-shadow(0.1px 0.1px 1px var(--color-main)) drop-shadow(0.1px -0.1px 1px var(--color-main)) drop-shadow(-0.1px -0.1px 1px var(--color-main)) drop-shadow(-0.1px 0.1px 1px var(--color-main))
+
+            &-blue
+                &:hover
+                    color: var(--color-white)
+                    background-color: var(--color-form-blue)
+                    border: 1px solid var(--color-form-blue)
+
+.card
+    header
+    footer
+        margin-top: auto
+        width: 100%
+    aside
+        display: flex
+        flex-direction: column
+        gap: 9px
+    user-select: none
+    .swiper-slide
+        border-radius: var(--radius)
+        overflow: hidden
+    &-row
+        display: flex
+    &-image
+        position: absolute
+        width: 100%
+        height: 100%
+        filter: brightness(70%)
+        z-index: -1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -2
+    &-picture
+        position: relative
+        border-radius: calc( var(--radius) - 10px )
+        overflow: hidden
+    &-img
+    &-price
+        font-size: 30px
+    &-icon
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        // width: 100%
+        height: 42px
+        min-width: 42px
+        border-radius: 50px
+        background-color: var(--color-white)
+    &-heart
+        top: 10px
+        right: 10px
+        width: 42px
+    &-location
+        bottom: 14px
+        left: 14px
+    &-content
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+    &-column
+        display: flex
+        justify-content: space-between
+        p
+            display: flex
+            flex-direction: column
+            align-items: center
+    &-active
+        position: absolute
+        top: 50%
+        left: 50%
+        transition: .3s
+        transform: translate(-50%, -50%)
+    &-link
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 50px
+        height: 50px
+        margin-bottom: 9px
+        border-radius: 50%
+        border: 2px solid var(--color-white)
+        background-color: var(--color-white)
+        svg
+            color: var(--main-text-color)
+        &-hovera
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 51px
+            height: 51px
+            border-radius: 50%
+            border: 2px solid var(--color-white)
+            transition: .3s
+            svg
+                padding-top: 2px
+    &-inner
+        display: flex
+        gap: 10px
+
+@media (min-width: 992px)
+    .card
+        .swiper-slide:hover
+            .card-active
+                opacity: 1
+                visibility: visible
+        &-active
+            opacity: 0
+            visibility: hidden
+            svg
+                transition: .3s
+            &:hover
+                text-shadow: 1px 1px 2px var(--color-main), 1px -1px 2px var(--color-main), -1px 1px 2px var(--color-main), -1px -1px 2px var(--color-main)
+                background-color: #fff3
+                backdrop-filter: blur(2px)
+                svg
+                    filter: drop-shadow(0.1px 0.1px 1px var(--color-main)) drop-shadow(0.1px -0.1px 1px var(--color-main)) drop-shadow(-0.1px -0.1px 1px var(--color-main)) drop-shadow(-0.1px 0.1px 1px var(--color-main))
+        &-location
+            justify-content: start
+            transition: .3s
+            white-space: nowrap
+            overflow: hidden
+            p
+                position: absolute
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                width: 42px
+                height: 42px
+                background-color: #fff
+            span
+                transition: .4s ease-in-out
+                margin-left: -300px
+                // display: none
+            &:hover
+                span
+                    margin-left: 0px
+                    padding-left: 42px
+                    padding-right: 20px
+        &-link
+            &-hover
+                svg
+                    transition: .3s
+                &:hover
+                    color: var(--color-main)
+                    background-color: var(--color-white)
+                    svg
+                        color: var(--color-main)
+
+@media (max-width: 991.98px)
+    .card
+        &-active
+            background-color: #fff3
+            backdrop-filter: blur(2px)
+        &-location
+            width: auto
+            padding: 0 15px 0 11px
+            span
+                margin-left: 5px

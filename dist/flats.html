@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Фильтры квартир</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	
+	<link rel="stylesheet" href="css/flats.css">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+<div class="burger"><span></span></div>
+
+<div class="navbar-blank"></div>
+
+<div class="navbar">
+    <div class="container-lg" style="max-width: 1920px; margin: auto">
+        <div class="logo">
+            <svg><use xlink:href="images/icons.svg#logo"></use></svg>
+        </div>
+    
+        <div class="menu">
+            <ul class="menu-list">
+                <li class="menu-item sub">
+                    <a href="#">Аукцион</a>
+                    <ul class="menu-sub">
+                        <li><a href="#">Создать аукцион</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item sub">
+                    <a href="#">Проекты</a>
+                    <ul class="menu-sub">
+                        <li><a href="#">Страница фильтра</a></li>
+                        <li><a href="#">Страница объекта</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Новости</a></li>
+                <li class="menu-item sub">
+                    <a href="#">О нас</a>
+                    <ul class="menu-sub">
+                        <li><a href="#">Руководство по покупке</a></li>
+                        <li><a href="#">Брокерам</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Новостройки</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    
+        <div class="language">
+            <select class="language-select">
+                <option value="en">en</option>
+                <option value="es" selected>es</option>
+                <option value="fr">fr</option>
+                <option value="de">de</option>
+            </select>
+        </div>
+    
+        <div class="contact">
+            <div class="contact-link">
+                <a href="#"><svg width="27" height="24"><use xlink:href="images/icons.svg#heart"></use></svg></a>
+                <a href="tel:+995706070141">+9 957 060 701 41</a>
+                <a href="#"><svg width="27" height="24"><use xlink:href="images/icons.svg#telegram"></use></svg></a>
+                <a href="#"><svg width="27" height="24"><use xlink:href="images/icons.svg#viber"></use></svg></a>
+            </div>
+            <form action="#" method="post" class="search">
+                <input placeholder="поиск" type="text" class="search-input" />
+                <button type="submit"><svg width="20" height="20"><use xlink:href="images/icons.svg#search"></use></svg></button>
+            </form>
+        </div>
+        <a href="#" class="login">
+            <div class="login-icon">
+                <svg width="24" height="24"><use xlink:href="images/icons.svg#user"></use></svg>
+            </div>
+            <div class="login-link">
+                <span>Войти</span>
+                <svg width="20" height="20"><use xlink:href="images/icons.svg#enter"></use></svg>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="mobile-menu">
+    <svg class="menu-icon">
+        <use xlink:href="images/icons.svg#menu"></use>
+    </svg>
+</div>
+
+
+
+<!--# include virtual="/parts/flats/filter.html" -->
+<div class="container" style="max-width: 1204px; margin: auto">
+    <h1>Надежные проекты</h1>
+    <form action="#" method="post" class="form-search">
+        <div class="form-group">
+            <label for="type">Тип жилья</label>
+            <select name="type" id="type">
+                <option value="квартира">Квартира</option>
+                <option value="дом">Дом</option>
+                <option value="таунхаус">Таунхаус</option>
+                <option value="комната">Комната</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="status">Статус</label>
+            <select name="status" id="status">
+                <option value="новостройка">Новостройка</option>
+                <option value="вторичка">Вторичка</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price_from">Цена от</label>
+            <input type="number" name="price_from" id="price_from" value="1000500">
+        </div>
+        <div class="form-group">
+            <label for="price_to">Цена до</label>
+            <input type="number" name="price_to" id="price_to" value="1900550">
+        </div>
+        <div class="form-group">
+            <label for="currency">Валюта</label>
+            <select name="currency" id="currency">
+                <option value="RUB">RUB</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="city">Город</label>
+            <input type="text" name="city" id="city" value="Батуми">
+        </div>
+        <div class="form-group">
+            <label for="district">Район</label>
+            <input type="text" name="district" id="district" value="Golf Grand">
+        </div>
+        <button type="submit">Найти</button>
+    </form>
+</div>
+<!--# include virtual="/parts/flats/flats.html" -->
+<!--# include virtual="/parts/general/form.html" -->
+
+
+
+<!--# include virtual="/parts/footer.html" -->

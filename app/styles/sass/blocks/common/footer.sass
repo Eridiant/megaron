@@ -1,0 +1,81 @@
+.footer
+    &.container-lg
+        padding-top: 55px
+        padding-bottom: 45px
+        background-color: var(--colot-footer-grey)
+    .footer
+        &-mail
+            a
+                display: inline-flex
+                gap: 10px
+                padding: 0 20px
+        // &-menu
+        //     display: flex
+    .menu
+        &-list
+            display: flex
+            flex-wrap: wrap
+            flex-direction: column
+            column-gap: 40px
+            max-height: 100px
+            width: 230px
+
+@media (min-width: 576px)
+    .footer
+        .container
+            display: grid
+            gap: 20px
+            grid-template-columns: repeat(2, auto)
+            grid-auto-rows: max-content
+        &-logo
+            grid-area: 1 / 1 / 2 / 2
+        &-menu
+            grid-area: 1 / 2 / 2 / 3
+        &-contact
+            grid-area: 3 / 2 / 4 / 3
+            display: flex
+            flex-direction: column
+            align-items: end
+        &-object
+            grid-area: 3 / 1 / 4 / 2
+            align-self: center
+        &-rights
+            grid-area: 2 / 1 / 3 / 2
+            align-self: center
+        &-mail
+            grid-area: 2 / 2 / 3 / 3
+            align-self: center
+@media (min-width: 992px)
+    .footer
+        .container
+            grid-template-columns: repeat(3, auto)
+            grid-auto-rows: max-content
+        &-logo
+            grid-area: 1 / 1 / 2 / 2
+        &-menu
+            grid-area: 1 / 2 / 2 / 3
+        &-contact
+            grid-area: 1 / 3 / 2 / 4
+        &-object
+            text-align: right
+            grid-area: 2 / 3 / 3 / 4
+            align-self: center
+        &-rights
+            grid-area: 2 / 1 / 3 / 2
+            align-self: center
+        &-mail
+            grid-area: 2 / 2 / 3 / 3
+            align-self: center
+@media (max-width: 575.98px)
+    .footer
+        .container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 20px
+        &-contact
+            text-align: center
+        &-object,
+        &-rights
+            text-align: center

@@ -1,0 +1,27 @@
+.recommend
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        gap: 5px 30px
+    &-item
+        display: flex
+        justify-content: space-between
+        flex-basis: 22%
+        max-width: 25%
+        flex-grow: 1
+        // flex-shrink: 10
+        a
+            position: relative
+            display: flex
+            flex-shrink: 0
+            color: var(--color-form-blue)
+            &::after
+                position: absolute
+                left: 100%
+                content: '...............................................................................'
+                // width: 50%
+                max-width: 100%
+                // flex-shrink: 10
+                white-space: nowrap
+                overflow: hidden
+                color: var(--color-main)

@@ -1,0 +1,87 @@
+.form.container
+    border-radius: var(--radius)
+    overflow: hidden
+    .background
+        img
+            filter: brightness(60%)
+.form .form
+    user-select: none
+    &-wrapper
+        padding: 55px 6%
+    &-input
+        width: 100%
+        padding: 10px 20px
+        border-radius: 50px
+        border: 2px solid var(--color-white)
+    &-label
+        margin-left: 20px
+        margin-bottom: 10px
+        text-transform: uppercase
+    &-form
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        flex-wrap: wrap
+        gap: 54px 20px
+        label
+            color: var(--color-white)
+        input
+            color: var(--color-white)
+            outline: none
+            transition: .3s
+            background-color: #fff0
+            &:not(:placeholder-shown)
+                backdrop-filter: blur(5px)
+            &::placeholder
+                color: var(--color-white)
+                opacity: 1
+    &-inner
+        p
+            margin-top: 22px
+        &-container
+            margin-top: 10px
+        &-checkbox
+            .form-inner-container
+                padding-left: 7px
+                border-radius: 50px
+                border: 2px solid var(--color-white)
+                position: relative
+            label
+                // padding-left: 10px
+                padding: 7px 7px 7px 10px
+                cursor: pointer
+                &:before
+                    width: 21px
+                    height: 21px
+                    border-radius: 50%
+                    background-color: #ffffff4d
+                &:after
+                    width: 13px
+                    height: 13px
+                    margin-top: 4px
+                    margin-left: 4px
+                    border-radius: 50%
+                    transition: .2s
+                    background-color: #fff0
+                &:before, &:after
+                    content: ""
+                    position: absolute
+                    left: 10px
+                    top: 10px
+            input[type="checkbox"]
+                outline: 0
+                visibility: hidden
+                &:checked
+                    + label
+                        &:after
+                            background-color: #fff
+@media (min-width: 576px)
+    .form .form
+        &-inner
+            max-width: 275px
+@media (max-width: 575.98px)
+    .form .form
+        &-form
+            justify-content: center
+            &-container
+                flex-grow: 1

@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	
+	<link rel="stylesheet" href="css/flats.css">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+<div class="burger"><span></span></div>
+
+<div class="navbar-blank"></div>
+
+<div class="navbar">
+    <div class="container-lg" style="max-width: 1920px; margin: auto">
+        <div class="logo">
+            <svg><use xlink:href="images/icons.svg#logo"></use></svg>
+        </div>
+    
+        <div class="menu">
+            <ul class="menu-list">
+                <li class="menu-item sub">
+                    <a href="#">Аукцион</a>
+                    <ul class="menu-sub">
+                        <li><a href="#">Создать аукцион</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item sub">
+                    <a href="#">Проекты</a>
+                    <ul class="menu-sub">
+                        <li><a href="#">Страница фильтра</a></li>
+                        <li><a href="#">Страница объекта</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Новости</a></li>
+                <li class="menu-item sub">
+                    <a href="#">О нас</a>
+                    <ul class="menu-sub">
+                        <li><a href="#">Руководство по покупке</a></li>
+                        <li><a href="#">Брокерам</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Новостройки</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    
+        <div class="language">
+            <select class="language-select">
+                <option value="en">en</option>
+                <option value="es" selected>es</option>
+                <option value="fr">fr</option>
+                <option value="de">de</option>
+            </select>
+        </div>
+    
+        <div class="contact">
+            <div class="contact-link">
+                <a href="#"><svg width="27" height="24"><use xlink:href="images/icons.svg#heart"></use></svg></a>
+                <a href="tel:+995706070141">+9 957 060 701 41</a>
+                <a href="#"><svg width="27" height="24"><use xlink:href="images/icons.svg#telegram"></use></svg></a>
+                <a href="#"><svg width="27" height="24"><use xlink:href="images/icons.svg#viber"></use></svg></a>
+            </div>
+            <form action="#" method="post" class="search">
+                <input placeholder="поиск" type="text" class="search-input" />
+                <button type="submit"><svg width="20" height="20"><use xlink:href="images/icons.svg#search"></use></svg></button>
+            </form>
+        </div>
+        <a href="#" class="login">
+            <div class="login-icon">
+                <svg width="24" height="24"><use xlink:href="images/icons.svg#user"></use></svg>
+            </div>
+            <div class="login-link">
+                <span>Войти</span>
+                <svg width="20" height="20"><use xlink:href="images/icons.svg#enter"></use></svg>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="mobile-menu">
+    <svg class="menu-icon">
+        <use xlink:href="images/icons.svg#menu"></use>
+    </svg>
+</div>
+
+
+
+
+
+<section class="auction white">
+    <div class="container-lg" style="max-width: 1920px; margin: auto">
+        <div class="background">
+            <picture>
+                <img src="/images/index/auction-bg.jpg" alt="">
+            </picture>
+        </div>
+        <div class="container" style="max-width: 1204px; margin: auto">
+            <div class="auction-wrapper">
+                <div class="auction-text">
+                    <p class="title">Создай свой аукцион</p>
+                    <p>Получай предложения напрямую от застройщиков за 5$</p>
+                    <a class="btn btn-white" href="#">
+                        <span>
+                            <span>отправить</span>
+                            <svg width="16" height="16"><use xlink:href="images/icons.svg#arrow"></use></svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="partner">
+                    <a class="partner-item" href="#"><img src="/images/index/partner-1.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-2.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-3.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-4.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-5.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-6.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-7.jpg" alt=""></a>
+                    <a class="partner-item" href="#"><img src="/images/index/partner-8.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="estate white">
+    <div class="container-lg" style="max-width: 1920px; margin: auto">
+        <div class="background">
+            <picture>
+                <img src="/images/index/estate-bg.jpg" alt="">
+            </picture>
+        </div>
+        <div class="container" style="max-width: 1204px; margin: auto">
+            <div class="estate-text">
+                <p class="title">Недвижимость В ОАЭ</p>
+                <p>Площадка №1 для аукциона</p>
+            </div>
+            <form class="form-estate" action="/search" method="post">
+                <div class="form-group">
+                    <label for="estate">Что ищете?</label>
+                    <div class="form-wrapper">
+                        <select class="form-control" id="estate" name="estate">
+                            <option value="apartment">Квартиру</option>
+                            <option value="house">Дом</option>
+                            <option value="room">Комнату</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="status">Статус</label>
+                    <div class="form-wrapper">
+                        <select class="form-control" id="status" name="status">
+                            <option value="new">Новостройки</option>
+                            <option value="secondary">Вторичка</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bedrooms">Спален</label>
+                    <div class="form-wrapper">
+                        <select class="form-control" id="bedrooms" name="bedrooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="price">Цена от</label>
+                    <div class="form-wrapper">
+                        <div class="form-inner">
+                            <input type="text" class="form-control" id="price" name="price">
+                            <span>-</span>
+                            <input type="text" class="form-control" id="price_to" name="price_to">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="currency">Валюта</label>
+                    <div class="form-wrapper">
+                        <select class="form-control" id="currency" name="currency">
+                            <option value="RUB">RUB</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city">Город</label>
+                    <div class="form-wrapper">
+                        <input type="text" class="form-control" id="city" name="city">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-blue">
+                    <span>
+                        <span>Поиск</span>
+                        <svg width="16" height="16"><use xlink:href="images/icons.svg#arrow"></use></svg>
+                    </span>
+                </button>
+            </form>
+            <div class="estate-consultation">
+                <a class="btn btn-white" href="#">
+                    <span>
+                        <span>Консультация</span>
+                        <svg width="20" height="20">
+                            <use xlink:href="images/icons.svg#chat"></use>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<div style="max-width: 700px; margin: auto">
+
+		<img src="images/dist/preview.jpg" alt="Start HTML5 Template" style="width: 100%"><br><br>
+		<h2 class="heading">Welcome to startup HTML template OptimizedHTML 5!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam reprehenderit nulla alias expedita a qui, pariatur doloremque ipsa fugit laboriosam odio iure recusandae laborum delectus praesentium magni reiciendis voluptatem. Sed.</p>
+
+	</div>
+
+
+
+
+<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+@media (min-width: 1200px)
+    .burger
+        display: none
+
+@media (max-width: 1199.98px)
+    .burger
+        position: fixed
+        top: 20px
+        right: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 50px
+        height: 50px
+        background-color: var(--color-white-transparent)
+        backdrop-filter: blur(5px)
+        z-index: 11
+        // width: 30px
+        // height: 30px
+        // margin: 25px
+        span
+            // margin: 0 auto
+            position: relative
+            top: 0px
+
+        span:before, span:after
+            position: absolute
+            content: ''
+
+        span, span:before, span:after
+            width: 30px
+            height: 6px
+            background-color: #000
+            display: block
+
+        span:before
+            margin-top: -12px
+
+        span:after
+            margin-top: 12px
+
+
+    .burger
+        span
+            transition-duration: 0s
+            transition-delay: 0.2s
+            &:before
+                transition-property: margin, transform
+                transition-duration: 0.2s
+                transition-delay: 0.2s, 0s
+            &:after
+                transition-property: margin, transform
+                transition-duration: 0.2s
+                transition-delay: 0.2s, 0s
+
+        &.active
+            span
+                background-color: rgba(0,0,0,0.0)
+                transition-delay: 0.2s
+                &:before
+                    margin-top: 0
+                    transform: rotate(45deg)
+                    transition-delay: 0s, 0.2s
+                &:after
+                    margin-top: 0
+                    transform: rotate(-45deg)
+                    transition-delay: 0s, 0.2s
+
+@media (max-width: 767.98px)
+    .burger
+        position: fixed
+        top: 10px
+        right: 10px

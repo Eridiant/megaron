@@ -1,0 +1,66 @@
+.estate
+    .background
+        &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            border-radius: var(--main-border-radius)
+            background: rgb(202,202,201)
+            background: linear-gradient(180deg, rgba(45, 44, 74, .6) 0%, rgba(45, 44, 74, 0) 100%)
+    .container
+        padding-top: 57px
+        padding-bottom: 100px
+    &-consultation
+        text-align: right
+        // margin-left: auto
+
+
+
+
+@media (min-width: 768px)
+    .estate
+        .background
+            border-radius: 30px
+            overflow: hidden
+
+.estate .form
+    &-estate
+        display: flex
+        align-items: flex-end
+        flex-wrap: wrap
+        gap: 0px 11px
+        padding: 23px 34px
+        border-radius: 30px
+        background-color: var(--color-form-grey)
+        label
+            color: var(--color-grey)
+        input, select
+            outline: none
+            border: none
+            border-radius: 50px
+            padding-left: 10px
+            // padding-right: 10px
+            // margin-left: 10px
+            // margin-right: 10px
+            background-color: var(--color-white)
+        button
+            height: 46px
+            margin-top: 11px
+    &-group
+        flex-grow: 1
+    &-wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 46px
+        border-radius: 50px
+        background-color: var(--color-white)
+        // background-color: red
+    &-inner
+        display: flex
+        input
+            max-width: 100px
+        span
+            color: var(--color-main)
+    &-control

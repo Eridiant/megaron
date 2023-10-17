@@ -1,0 +1,103 @@
+:root
+    --color-main: #000000
+    --color-darkblue: #263064
+    --color-blue: #11a0e5
+    --color-form-blue: #73b4e5
+    --color-form-blue-transparent: #73b4e577
+    --color-white: #ffffff
+    --color-white-transparent: #ffffff77
+    --color-grey: #8a8a8a
+    --colot-footer-grey: #f3f5f9
+    --color-form-grey: #e4e4e4
+    --main-text-color: #000000
+    --gap: calc( .1vw * 10 )
+    --radius: 30px
+
+    --swiper-pagination-color: var(--color-blue)
+    --swiper-pagination-bullet-inactive-color: #D9D9D9
+    --swiper-pagination-bullet-inactive-opacity: 1
+    --swiper-pagination-bottom: 0
+    --swiper-pagination-bullet-size: 6px
+    --swiper-theme-color: #fff
+    --swiper-navigation-size: 40px
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/swiper/swiper.scss' // Bootstrap Reboot collection
+@import 'node_modules/swiper/modules/navigation.scss' // Bootstrap Reboot collection
+@import 'node_modules/swiper/modules/pagination.scss' // Bootstrap Reboot collection
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+    @font-face
+        font-family: $fname
+        font-style: $fstyle
+        font-weight: $fweight
+        src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL CSS SETTINGS
+
+::selection
+    background-color: $accent
+    color: #fff
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+
+button
+    outline: none
+    border: none
+    background-color: #fff
+    transition: .3s
+    border-radius: 50px
+
+body
+    font-family: $userfont
+    font-size: $fontsize
+    line-height: $lineheight
+    color: $textcolor
+    min-width: 320px
+    position: relative
+    overflow-x: hidden
+
+a
+    text-decoration: none
+    color: var(--main-text-color)
+ul
+    padding-left: 0
+    margin-bottom: 0
+li
+    list-style-type: none
+p, address
+    margin-bottom: 0
+
+sup
+    font-size: 0.7em
