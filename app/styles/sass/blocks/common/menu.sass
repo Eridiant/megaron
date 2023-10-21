@@ -1,0 +1,149 @@
+.menu
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    cursor: pointer
+    transition: .4s
+    background-color: #00000000
+    z-index: -1
+    &-wrapper
+        width: 100%
+        height: 100%
+        max-width: 500px
+        min-height: 600px
+        padding: 23px 20px
+        cursor: auto
+        transition: .4s
+        background-color: var(--color-white)
+        z-index: 999
+    &-header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-phone
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+    &-nav
+        // display: flex
+        // flex-direction: column
+        // justify-content: space-between
+        // height: 70vh
+        ul
+            // display: flex
+            // flex-direction: column
+            // justify-content: space-between
+            // height: 40vh
+        address
+            display: flex
+            margin-top: 10px
+            svg
+                min-width: 17px
+                flex-grow: 0
+    &-footer
+    &-link
+        margin-left: 30px
+        padding-top: 40px
+        margin-bottom: 40px
+        li:not(:last-child)
+            margin-bottom: 20px
+    &-icon
+        position: fixed
+        top: 150px
+        right: 0px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 62px
+        height: 54px
+        line-height: 100%
+        cursor: pointer
+        user-select: none
+        color: var(--main-bg)
+        text-shadow: 1px 1px 2px var(--main-color), -1px 1px 2px var(--main-color), -1px -1px 2px var(--main-color), 1px -1px 2px var(--main-color)
+        font-size: 2.0em
+        // border: 1px solid #000
+        // border-right: none
+        box-shadow: 1px 1px 2px #0004, -1px 1px 2px #0004, -1px -1px 2px #0004, 1px -1px 2px #0004
+        border-radius: 50% 0 0 50%
+        background-color: var(--color-white)
+        transition: 0.3s
+        z-index: 1001
+        p
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 0
+            margin-right: 8px
+            width: 42px
+            height: 42px
+            color: var(--color-white)
+            border-radius: 50%
+            background-color: var(--main-text-color)
+            transition: 0.3s
+        .menu-show
+            display: none
+            opacity: 0
+            visibility: hidden
+.scr .menu
+    &-icon
+        top: 100px
+.show .menu
+    &-icon
+        top: 130px
+        p:not([class])
+            display: none
+            opacity: 0
+            visibility: hidden
+            font-size: 32px
+    &-show
+        display: flex
+        opacity: 1
+        visibility: visible
+.menu
+    &-wrapper
+        transform: translateX(-100%)
+        .icon
+            svg
+                width: 190px
+                height: 31px
+.show
+    transition: .4s
+    background-color: #00000000
+.show.menu
+    // display: block
+    background-color: #00000077
+    z-index: 999
+    .menu-wrapper
+        transform: translateX(0%)
+@media (min-width: 1200px)
+    .menu
+        &-icon
+            display: none
+@media (max-width: 1199.98px)
+    .menu
+        .nav
+            margin-bottom: 20px
+            .menu
+                &-sub
+                    padding-left: 20px
+            .sub
+            ul ul
+                max-height: 0
+                overflow: hidden
+                transition: max-height 0.3s ease-in-out
+        &-header
+            display: flex
+            flex-direction: column
+            gap: 10px
+        &-footer
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 10px
+@media (max-width: 340px)
+    .menu
+        .icon
+            // width: 80px

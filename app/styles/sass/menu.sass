@@ -4,17 +4,25 @@
 
 @media (max-width: 1199.98px)
     .burger
-        position: fixed
-        top: 20px
-        right: 20px
         display: flex
         justify-content: center
         align-items: center
-        width: 50px
-        height: 50px
-        background-color: var(--color-white-transparent)
-        backdrop-filter: blur(5px)
-        z-index: 11
+        width: 43px
+        height: 43px
+        margin-left: -7px
+        border-radius: 50%
+        background-color: var(--color-main)
+        // position: fixed
+        // top: 20px
+        // right: 20px
+        // display: flex
+        // justify-content: center
+        // align-items: center
+        // width: 50px
+        // height: 50px
+        // background-color: var(--color-white-transparent)
+        // backdrop-filter: blur(5px)
+        // z-index: 11
         // width: 30px
         // height: 30px
         // margin: 25px
@@ -24,20 +32,21 @@
             top: 0px
 
         span:before, span:after
-            position: absolute
+            // position: absolute
             content: ''
 
         span, span:before, span:after
-            width: 30px
-            height: 6px
-            background-color: #000
+            width: 24px
+            height: 3px
+            border-radius: 3px
+            background-color: var(--color-white)
             display: block
 
         span:before
-            margin-top: -12px
+            margin-top: -8px
 
         span:after
-            margin-top: 12px
+            margin-top: 13px
 
 
     .burger
@@ -53,7 +62,8 @@
                 transition-duration: 0.2s
                 transition-delay: 0.2s, 0s
 
-        &.active
+    .active
+        .burger
             span
                 background-color: rgba(0,0,0,0.0)
                 transition-delay: 0.2s
@@ -68,6 +78,6 @@
 
 @media (max-width: 767.98px)
     .burger
-        position: fixed
-        top: 10px
-        right: 10px
+        // position: fixed
+        // top: 10px
+        // right: 10px

@@ -1,0 +1,24 @@
+.payment
+    &-table
+        min-width: 500px
+        padding: 20px 30px
+        border-radius: var(--radius)
+        background-color: var(--color-form-grey)
+        &-wrapper
+            overflow-y: scroll
+            // &::-webkit-scrollbar:horizontal
+            //     width: 100px
+            //     height: 100px
+            // &::-webkit-scrollbar-track-piece
+            //     border-radius: 10px
+            // &::-webkit-scrollbar-thumb
+            //     border-radius: 10px
+        table
+            border-collapse: collapse
+            th, td
+                min-width: 100px
+                padding: 10px
+            tbody tr
+                transition: .2s
+                &:hover
+                    background-color: var(--color-white-transparent)

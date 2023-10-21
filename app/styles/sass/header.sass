@@ -35,13 +35,13 @@
             width: 175px
             height: 70px
 .navbar
-    .menu
+    .nav
         margin-left: var(--gap)
         margin-right: var(--gap)
         &-item
             margin-left: var(--gap)
             margin-right: var(--gap)
-.menu
+.nav
     a
         &:hover
             border-bottom: 1px solid var(--color-main)
@@ -49,8 +49,10 @@
         display: flex
     &-item
         position: relative
-        &.sub
-            margin-right: calc(2 * var(--gap))
+    .sub
+        margin-right: calc(2 * var(--gap))
+        > a
+            position: relative
             &::after
                 position: absolute
                 content: ''
@@ -61,7 +63,7 @@
                 z-index: 1
                 transition: .3s
         &:hover
-            .menu-sub
+            .nav-sub
                 opacity: 1
                 top: 35px
                 visibility: visible
@@ -102,7 +104,7 @@
 
 @media (max-width: 767.98px)
     .navbar
-        .menu
+        .nav
             display: none
 @media (min-width: 768px)
 
@@ -181,27 +183,27 @@
     .scroll
         .search
             display: none
-
+.login
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 52px
+        height: 52px
+        color: var(--color-white)
+        background-color: var(--color-main)
+        border-radius: 50%
+        transition: .3s
+    &-link
+        color: var(--color-grey)
+        transition: .3s
+        span
+            border-bottom: 1px solid var(--color-grey)
 @media (min-width: 1200px)
     .login
-        display: flex
-        flex-direction: column
-        align-items: center
-        &-icon
-            display: flex
-            justify-content: center
-            align-items: center
-            width: 52px
-            height: 52px
-            color: var(--color-white)
-            background-color: var(--color-main)
-            border-radius: 50%
-            transition: .3s
-        &-link
-            color: var(--color-grey)
-            transition: .3s
-            span
-                border-bottom: 1px solid var(--color-grey)
         &:hover
             .login
                 &-icon
@@ -210,13 +212,14 @@
                 &-link
                     color: var(--color-main)
 
-    .scroll
+    .navbar.scroll
         .login-icon
             display: none
 
 @media (max-width: 1199.98px)
-    .login
-        display: none
+    .navbar
+        .login
+            display: none
 @media (max-width: 991.98px)
 @media (max-width: 767.98px)
 @media (max-width: 575.98px)

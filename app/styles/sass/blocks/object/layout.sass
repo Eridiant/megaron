@@ -1,0 +1,25 @@
+.layout
+    &-items
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: 20px
+    &-item
+        flex-basis: 20%
+        flex-grow: 1
+        min-width: 280px
+        max-width: 400px
+    &-image
+        border-radius: var(--radius)
+        overflow: hidden
+        img
+            width: 100%
+            object-fit: cover
+
+@media (min-width: 992px)
+    .layout
+        // &-image
+        //     position: relative
+        //     &:hover
+        //         &::after
+        //             content: 

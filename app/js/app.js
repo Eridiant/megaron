@@ -1,7 +1,7 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 // import 'swiper/scss';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,18 +37,42 @@ document.addEventListener('DOMContentLoaded', () => {
         let target = e.target;
 
 
-        if (target.closest('.burger')) {
-            let menu = document.querySelector('.burger');
-            console.log('menu');
-            if (target.closest('.active')) {
-                console.log('active');
-                menu.classList.remove('active');
+        // if (target.closest('.show .menu-icon') || target.classList.contains('show')) {
+        //     document.querySelector('.menu').classList.remove('show');
+        //     document.body.classList.remove('show');
+        //     document.body.style.overflow = 'auto';
+        //     return;
+        // }
+        // console.log(target);
+
+        if (target.closest('#menu .menu-item.sub') && !target.closest('#menu .menu-item.sub a')) {
+            let sub = target.querySelector('.menu-sub');
+            // console.log('item', target.closest('#menu .menu-item.sub'));
+            // console.log('sub', sub);
+            if (sub.style.maxHeight) {
+                sub.style.maxHeight = null;
             } else {
-                console.log('passive');
+                sub.style.maxHeight = sub.scrollHeight + 'px';
+            }
+        }
+
+        if (target.closest('.menu-icon') || target.classList.contains('show')) {
+            let menu = document.querySelector('.menu-icon');
+
+            if (target.closest('.active') || target.classList.contains('show')) {
+                menu.classList.remove('active');
+                document.querySelector('#menu').classList.remove('show');
+                document.body.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            } else {
                 menu.classList.add('active');
+                document.querySelector('#menu').classList.add('show');
+                document.body.classList.add('show');
+                document.body.style.overflow = 'hidden';
             }
             return;
         }
+        console.log('target', target);
     })
 
     var panorama = new Swiper(".panorama-swiper", {
@@ -153,6 +177,25 @@ document.addEventListener('DOMContentLoaded', () => {
             300: {
                 slidesPerView: 1,
             },
+        },
+    });
+
+    var gallery = new Swiper(".gallery-swiper-thumbs", {
+        modules: [Navigation],
+        spaceBetween: 10,
+        slidesPerView: 4,
+        // freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var thumb = new Swiper(".gallery-swiper", {
+        modules: [Thumbs],
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: gallery,
         },
     });
 
