@@ -11,6 +11,8 @@
     --color-form-grey: #e4e4e4
     --main-text-color: #000000
     --gap: calc( .1vw * 10 )
+    --gap-common: 40px
+    --padding: 60px 60px
     --radius: 30px
 
     --swiper-navigation-color: var(--color-white)
@@ -21,6 +23,11 @@
     --swiper-pagination-bullet-size: 6px
     --swiper-theme-color: #fff
     --swiper-navigation-size: 40px
+
+@media (max-width: 767.98px)
+    :root
+        --padding: 40px 50px
+
 // USER VARIABLES SECTION
 
 $accent: orange // Accent Color
@@ -83,7 +90,7 @@ button
 body
     font-family: $userfont
     font-size: $fontsize
-    line-height: $lineheight
+    line-height: 1.35
     color: $textcolor
     min-width: 320px
     position: relative
