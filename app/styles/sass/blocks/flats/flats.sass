@@ -1,0 +1,20 @@
+.flats
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        gap: 33px 19px
+        .swiper-slide
+            // flex-basis: 30%
+            // flex-grow: 1
+
+@media (min-width: 680px)
+    .flats
+        &-wrapper
+            .swiper-slide
+                width: calc( 50% - 19px / 2 )
+
+@media (min-width: 992px)
+    .flats
+        &-wrapper
+            .swiper-slide
+                width: calc( 100% / 3 - 19px * 2 / 3 )

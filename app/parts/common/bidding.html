@@ -1,10 +1,12 @@
-<section class="about container" style="max-width: 1204px; margin-left: auto; margin-right: auto">
-    <div class="about-wrapper">
-        <div class="about-desc">
-            <p class="title">Что такое аукцион</p>
-            <p>
-                Аукцион сэкономит Ваше время и предоставит Вам лучшие предложения от надежных застройщиков. Быстро, выгодно и качественно.
-            </p>
+<section class="bidding container" style="max-width: 1204px; margin-left: auto; margin-right: auto">
+    <div class="bidding-wrapper">
+        <div class="bidding-desc">
+            <div class="bidding-inner">
+                <p class="title">Что такое аукцион</p>
+                <p>
+                    Аукцион сэкономит Ваше время и предоставит Вам лучшие предложения от надежных застройщиков. Быстро, выгодно и качественно.
+                </p>
+            </div>
             <div>
                 <a href="#" class="btn btn-blue">
                     <span>
@@ -14,23 +16,23 @@
                 </a>
             </div>
         </div>
-        <div class="about-items">
-            <div class="about-item">
+        <div class="bidding-items">
+            <div class="bidding-item">
                 Преимущество аукциона
             </div>
-            <div class="about-item">
+            <div class="bidding-item">
                 Длинное преимущество аукциона
             </div>
-            <div class="about-item">
+            <div class="bidding-item">
                 Преимущество аукциона
             </div>
-            <div class="about-item">
+            <div class="bidding-item">
                 Длинное преимущество аукциона
             </div>
-            <div class="about-item">
+            <div class="bidding-item">
                 Преимущество аукциона
             </div>
-            <div class="about-item">
+            <div class="bidding-item">
                 Преимущество аукциона
             </div>
         </div>

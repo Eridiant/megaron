@@ -1,0 +1,57 @@
+.company
+    &-desc
+        white-space: pre-line
+        margin-bottom: 40px
+    &-statistics
+        display: flex
+        flex-wrap: wrap
+        dl
+            flex-basis: 100%
+            text-align: center
+        dt
+            font-size: 62px
+        dd
+            font-weight: 400
+
+@media (min-width: 576px)
+    .company
+        &-statistics
+            dl
+                flex-basis: 50%
+                flex-grow: 1
+                padding-left: 18px
+                padding-right: 18px
+                &:nth-child(odd)
+                    border-right: 1px solid var(--color-main)
+                    // padding-left: 18px
+
+@media (min-width: 768px)
+    .company
+        &-desc
+            column-count: 2
+            column-gap: 20px
+
+@media (min-width: 992px)
+    .company
+        &-statistics
+            dl
+                flex-basis: 25%
+                &:not(:last-child)
+                    border-right: 1px solid var(--color-main)
+
+@media (max-width: 575.98px)
+    .company
+        &-statistics
+            gap: 18px
+            dl
+                position: relative
+                &:not(:last-child)
+                    &::after
+                        position: absolute
+                        bottom: -9px
+                        left: 50%
+                        transform: translateX(-50%)
+                        content: ''
+                        width: 100px
+                        height: 1px
+                        background-color: var(--color-main)

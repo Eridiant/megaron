@@ -56,6 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        if (target.closest('.popup-close') || target.classList.contains('popup')) {
+
+            document.querySelector('.popup-inner').className = 'popup-inner';
+            document.querySelector('.popup').className = 'popup';
+            document.body.classList.remove('show');
+        }
+
         if (target.closest('.menu-icon') || target.classList.contains('show')) {
             let menu = document.querySelector('.menu-icon');
 
@@ -72,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return;
         }
-        console.log('target', target);
+        // console.log('target', target);
     })
 
     var panorama = new Swiper(".panorama-swiper", {

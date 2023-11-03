@@ -111,6 +111,23 @@ function buildcopy() {
 	.pipe(dest('dist'))
 }
 
+function yii() {
+	return src([
+		'{app/js,app/css}/*.min.*',
+		'app/images/**/*.*',
+		'!app/src/**/*',
+    ], { base: 'app/' })
+    .pipe(dest(file => {
+        if (file.extname === '.css' || file.extname === '.js') {
+            return '/home/eridiant/www/megaron.do/public';
+        }
+        if (file.relative.startsWith('images')) {
+            return '/home/eridiant/www/megaron.do/public';
+        }
+        return file.base;
+    }));
+}
+
 async function buildhtml() {
 	let includes = new ssi('app/', 'dist/', '/**/*.html')
 	includes.compile()
@@ -144,8 +161,8 @@ function startwatch() {
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
-export { scripts, styles, images, deploy }
+export { scripts, styles, images, yii, deploy }
 export let assets = series(scripts, styles, images)
-export let build = series(cleandist, images, scripts, styles, buildcopy, buildhtml)
+export let build = series(cleandist, images, yii, scripts, styles, buildcopy, buildhtml)
 
-export default series(scripts, styles, images, parallel(browsersync, startwatch))
+export default series(scripts, styles, images, yii, parallel(browsersync, startwatch))

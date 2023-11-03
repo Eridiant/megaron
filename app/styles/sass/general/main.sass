@@ -9,6 +9,11 @@
     font-family: 'Montserrat', sans-serif
     font-weight: 500
     line-height: 1.35
+    margin-bottom: 1.36em
+@media (max-width: 575.98px)
+    .title
+        font-size: 2em
+        // margin-bottom: 20px
 
 .heading
     font-size: 1.125em
@@ -84,6 +89,15 @@ a
         border-radius: 50px
         border: 1px solid var(--color-white)
         background-color: var(--color-white)
+        &-black
+            display: inline-flex
+            justify-content: center
+            align-self: flex-start
+            border-radius: 50px
+            border: 1px solid var(--color-white)
+            background-color: var(--color-white)
+            > span
+                flex-shrink: 0
     &-blue
         display: inline-flex
         justify-content: center
@@ -110,6 +124,11 @@ a
             &:hover
                 background-color: var(--color-white-transparent)
                 backdrop-filter: blur(5px)
+            &-black
+                &:hover
+                    color: var(--color-white)
+                    border: 1px solid var(--color-main)
+                    background-color: var(--color-main)
         &-blue
             &:hover
                 text-shadow: 1px 1px 2px var(--color-white), 1px -1px 2px var(--color-white), -1px 1px 2px var(--color-white), -1px -1px 2px var(--color-white)
@@ -167,6 +186,7 @@ a
     display: inline-flex
     justify-content: center
     align-items: center
+    gap: 15px
     min-height: 42px
     border: 1px solid var(--color-main)
     border-radius: 50px
@@ -181,6 +201,12 @@ a
             // color: inherit
     svg
         // margin-right: 15px
+    // > *:first-child
+    //     &:not(span)
+    //         margin-right: 15px
+    // > *:last-child
+    //     &:not(span)
+    //         margin-left: 15px
 @media (min-width: 992px)
     .border
 
@@ -384,3 +410,21 @@ a
             padding: 0 15px 0 11px
             span
                 margin-left: 5px
+
+.more
+    text-align: center
+    color: var(--color-form-blue)
+    font-weight: 600
+    margin-top: 20px
+    a
+        border-bottom: 1px solid var(--color-form-blue)
+
+@media (max-width: 575.98px)
+    .dt
+        display: none
+@media (min-width: 576px)
+    .mb
+        display: none
+
+
+

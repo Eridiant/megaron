@@ -1,4 +1,4 @@
-<div style="max-width: 1204px; margin: auto">
+<div style="max-width: 1204px; margin-left: auto; margin-right: auto">
     <div class="search-filter-container">
         <div class="search-filter-container1">
             <p class="search-label">Что ищете?</p>

@@ -1,4 +1,4 @@
-.about
+.bidding
     .btn
         margin-top: 40px
     &-wrapper
@@ -7,29 +7,24 @@
         gap: var(--gap-common)
     &-desc
         display: flex
-        flex-direction: column
-        flex-basis: 35%
-        flex-grow: 1
-        min-width: 300px
-        flex-shrink: 100
-        div
-            margin-top: auto
+        flex-wrap: wrap
+        gap: var(--gap)
+        > div
+            flex-basis: 40%
+            flex-grow: 1
+            min-width: 300px
     &-items
         display: flex
         flex-wrap: wrap
-        flex-basis: 20%
-        flex-grow: 2
-        flex-shrink: 0
         gap: 50px 20px
-        // flex-shrink: 5
         min-width: 300px
-        padding: 60px
+        padding: var(--padding-items)
         border-radius: var(--radius)
         background-color: var(--colot-footer-grey)
     &-item
-        flex-basis: 26%
+        flex-basis: 15%
         flex-grow: 1
-        // min-width: 100px
+        min-width: 100px
         &::before
             display: block
             content: ''
@@ -40,19 +35,13 @@
             background-color: var(--color-form-blue)
 
 @media (min-width: 576px)
-    .about
-        &-wrapper > div
-            min-width: 400px
-@media (min-width: 768px)
-    .about
-        &-wrapper
-            .about-items
-                min-width: 600px
+    .bidding
+        &-desc
+            > div
+                &:last-child
+                    align-self: flex-end
+                    text-align: end
 @media (max-width: 767.98px)
-    .about
-        &-items
-            padding: 45px 35px
+    .bidding
 @media (max-width: 350px)
-    .about
-        &-items
-            padding: 35px 20px
+    .bidding

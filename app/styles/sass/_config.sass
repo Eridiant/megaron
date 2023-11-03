@@ -13,10 +13,12 @@
     --gap: calc( .1vw * 10 )
     --gap-common: 40px
     --padding: 60px 60px
+    --padding-items: 60px 60px
+    --popup-padding: 30px 60px
     --radius: 30px
 
     --swiper-navigation-color: var(--color-white)
-    --swiper-pagination-color: var(--color-white)
+    --swiper-pagination-color: var(--color-blue)
     --swiper-pagination-bullet-inactive-color: #D9D9D9
     --swiper-pagination-bullet-inactive-opacity: 1
     --swiper-pagination-bottom: 0
@@ -27,6 +29,7 @@
 @media (max-width: 767.98px)
     :root
         --padding: 40px 50px
+        --padding-items: 35px 20px
 
 // USER VARIABLES SECTION
 
@@ -43,12 +46,13 @@ $gutter: $grid-gutter-width
 
 // IMPORT SECTION
 
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+
 @import 'node_modules/swiper/swiper.scss' // Bootstrap Reboot collection
 @import 'node_modules/swiper/modules/navigation.scss' // Bootstrap Reboot collection
 @import 'node_modules/swiper/modules/pagination.scss' // Bootstrap Reboot collection
-
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
 

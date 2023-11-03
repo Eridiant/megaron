@@ -1,4 +1,8 @@
 .projects
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        gap: 33px 19px
     // .swiper-slide:not(.show)
     //     display: none
     //     // max-width: 0
@@ -32,11 +36,20 @@
             color: var(--color-white)
             background-color: var(--main-text-color)
 
+@media (min-width: 680px)
+    .projects
+        &-wrapper
+            .swiper-slide
+                width: calc( 50% - 19px / 2 )
+
 @media (min-width: 992px)
     .projects
         .swiper
             &-buttons
                 top: 115px
+        &-wrapper
+            .swiper-slide
+                width: calc( 100% / 3 - 19px * 2 / 3 )
         &-switch
             max-width: 90%
             a:hover

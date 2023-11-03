@@ -1,0 +1,44 @@
+.event
+    &-items
+    &-item
+        display: flex
+        flex-wrap: wrap
+        gap: 20px 40px
+        margin-bottom: 40px
+        padding: 17px
+        border-radius: var(--radius)
+        background-color: var(--colot-footer-grey)
+    &-image
+        flex-basis: 195px
+        flex-grow: 1
+        flex-shrink: 0
+        max-width: 450px
+        min-width: 300px
+        border-radius: calc( var(--radius) * 2 / 3 )
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &-desc
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        flex-grow: 1
+        flex-shrink: 1
+        flex-basis: 50%
+        gap: 20px
+        &-header
+            display: flex
+            justify-content: space-between
+            gap: 20px
+        &-inner
+            max-width: 400px
+        &-excerpt
+        &-mb
+            text-align: center
+
+@media (min-width: 768px)
+    .event
+        &-desc
+            padding: 10px 10px 10px 0
