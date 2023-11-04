@@ -1,0 +1,43 @@
+.investment
+    display: flex
+    flex-wrap: wrap
+    column-gap: 60px
+    row-gap: 40px
+    > div
+        flex-basis: 40%
+        flex-grow: 1
+        min-width: 300px
+    .title
+        margin-bottom: 15px
+    &-list
+        padding: 60px
+        @media (max-width: 767.98px)
+            padding: 30px
+        border-radius: var(--radius)
+        background-color: var(--color-form-grey)
+        > p
+            margin-bottom: 26px
+    &-items
+        display: grid
+        gap: 20px
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+    &-item
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 40px
+            height: 40px
+            margin-bottom: 15px
+            border-radius: 50%
+            color: var(--color-white)
+            background-color: var(--color-red)
+        &.double
+            grid-column: span 2
+            max-width: 250px
+    &-desc
+        p
+            margin-top: 0.7em
+            margin-bottom: 1em
+    &-
+    &-
